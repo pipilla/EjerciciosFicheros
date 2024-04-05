@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class MostrarFicheroDeTextoFlujo {
+public class MostrarFicheroDeTextoBufer {
     private static final String FICHERO = String.format("%s%s%s", "ejemplos", File.separator, "ficheroTexto.txt");
 
     public static void main(String[] args) {
