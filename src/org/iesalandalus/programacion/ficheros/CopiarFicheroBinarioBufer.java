@@ -4,17 +4,17 @@ import org.iesalandalus.programacion.utilidades.Entrada;
 
 import java.io.*;
 
-public class CopiarFicheroBinario {
+public class CopiarFicheroBinarioBufer {
     private static final String FICHERO = String.format("%s%s%s", "ejemplos", File.separator, "pantera_rosa.jpg");
     public static void main(String[] args) {
         System.out.printf("%nDime el nombre del fichero que quieres guardar como copia: ");
         String ficheroNuevo = Entrada.cadena();
 
-        try (FileInputStream ficheroCopia = new FileInputStream(ficheroNuevo);
-             FileOutputStream entrada = new FileOutputStream(FICHERO)) {
+        try (BufferedOutputStream ficheroCopia = new BufferedOutputStream(new FileOutputStream(ficheroNuevo));
+             BufferedInputStream entrada = new BufferedInputStream(new FileInputStream(FICHERO))) {
             int origen;
             while ((origen = entrada.read()) != -1) {
-                ficheroCopia.write(((char) origen));
+                ficheroCopia.write(origen);
             }
             System.out.println("Fichero copiado.");
 
