@@ -3,7 +3,7 @@ package org.iesalandalus.programacion.ficheros;
 import java.io.*;
 
 public class LeerFicheroObjetos {
-    private static final String FICHERO = String.format("%s%s%s", "ejemplos", File.separator, "copia_personas_csv.obj");
+    private static final String FICHERO = String.format("%s%s%s", "ejemplos", File.separator, "objeto_personas_xml.obj");
     public static void main(String[] args) {
 
 
