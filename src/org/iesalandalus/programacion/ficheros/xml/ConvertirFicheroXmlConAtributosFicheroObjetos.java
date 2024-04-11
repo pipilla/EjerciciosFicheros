@@ -35,7 +35,5 @@ public class ConvertirFicheroXmlConAtributosFicheroObjetos {
         } catch (IOException e) {
             System.out.println("Error inesperado de entrada/salida.");
         }
-
-
     }
 }
